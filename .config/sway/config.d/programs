@@ -1,0 +1,14 @@
+# set $term termite
+set $term urxvt
+set $firefox firefox-nightly
+set $telegram telegram-desktop
+# set $runmenu dmenu_run
+set $runmenu rofi -show run 
+
+bindsym $mod+d      exec $runmenu
+bindsym $mod+Return exec $term
+bindsym Insert exec $term -e python
+bindsym $mod+t exec $telegram
+bindsym $mod+x exec $firefox
+bindsym $mod+s exec slack
+bindsym $mod+l exec swaylock -c 000000

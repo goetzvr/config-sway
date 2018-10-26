@@ -1,0 +1,6 @@
+bindsym Print exec grim $(xdg-user-dir PICTURES)/$(date +'%Y-%m-%d-%H%M%S_grim.png')
+bindsym Shift+Print exec slurp | grim -g - $(xdg-user-dir PICTURES)/$(date +'%Y-%m-%d-%H%M%S_grim.png') 
+# bindsym Mod1+Print exec ss.py -w
+# bindsym Control+Mod1+Print exec ss.py -w -c
+# bindsym Shift+Print exec ss.py -r
+# bindsym Control+Shift+Print exec ss.py -r -c

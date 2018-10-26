@@ -1,0 +1,12 @@
+# class                 border  backgr. text    indicator child.border
+client.focused          #222222 #6272a4 #ffffff #ffffff #000000
+client.focused_inactive #333333 #222222 #ffffff #888888 #000000
+client.unfocused        #333333 #222222 #888888 #888888 #000000
+client.urgent           #222222 #ffc123 #ffffff #ffc123 #000000
+
+default_border pixel 1
+default_floating_border pixel 1
+hide_edge_borders smart
+
+gaps inner 3
+gaps outer 3

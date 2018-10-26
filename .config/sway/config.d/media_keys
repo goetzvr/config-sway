@@ -1,0 +1,16 @@
+bindsym XF86MonBrightnessUp exec brightnessctl s 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
+
+bindsym XF86AudioRaiseVolume exec amixer -D pulse -q sset Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -D pulse -q sset Master 5%- unmute
+bindsym XF86AudioMute exec amixer -q sset Master toggle
+
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioStop exec mpc stop
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc cdprev
+
+# bindsym Shift+XF86AudioPlay exec playerctl play-pause
+# bindsym Shift+XF86AudioStop exec playerctl stop
+# bindsym Shift+XF86AudioNext exec playerctl next
+# bindsym Shift+XF86AudioPrev exec playerctl previous

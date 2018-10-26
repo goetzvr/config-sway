@@ -1,0 +1,44 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar at the bottom of your screen
+    "height": 20, // Waybar height
+    // "width": 1366, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["sway/workspaces", "custom/spotify"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "clock"],
+    // Modules configuration
+    "sway/workspaces": {
+        "format-icons": {
+            "1": "",
+            "3": "",
+            "5": "",
+            "8": "",
+            "9": "",
+            "10": ""
+        }
+    },
+    "cpu": {
+        "format": "{}% "
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "interface": "wlp3s0",
+        "format": "{essid} ({signalStrength}%) "
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": ["", ""]
+    },
+    "custom/spotify": {
+        "format": " {}",
+        "exec": "$HOME/bin/mediaplayer.sh"
+    }
+}

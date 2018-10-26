@@ -1,0 +1,9 @@
+# swaymsg -t get_outputs
+
+#output eDP-1 resolution 1366x768 pos 0,0
+#output HDMI-A-1 resolution 1366x768 pos 1366,0
+#output * bg #282A36 solid_color
+output eDP-1 bg ~/.config/wall.png stretch
+output eDP pos 0 0 res 1366x768
+output DP-3 pos 1366 0 res 1680x1050
+#output DP-4 pos 1680 0 res 1680x1050
