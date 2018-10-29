@@ -84,6 +84,9 @@ window {
 #network {
     background: #2980b9;
 }
+#network.disconnected {
+    background: #f53c3c;
+}
 
 #pulseaudio {
     background: #f1c40f;
@@ -98,4 +101,8 @@ window {
 #custom-spotify {
     background: #66cc99;
     color: #2a5c45;
+}
+
+#tray {
+    background-color: #2980b9;
 }

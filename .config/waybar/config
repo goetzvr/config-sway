@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "custom/spotify"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "clock"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "clock", "tray"],
     // Modules configuration
     "sway/workspaces": {
         "format-icons": {
@@ -21,6 +21,16 @@
     "cpu": {
         "format": "{}% "
     },
+    "sway/window": {
+        "max-length": 60
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": { 
+        "format-alt": "{:%Y-%m-%d}"
+    },
     "memory": {
         "format": "{}% "
     },
@@ -28,17 +38,36 @@
         "format": "{capacity}% {icon}",
         "format-icons": ["", "", "", "", ""]
     },
+    "battery#bat0": {
+        "bat": "BAT0"
+    },
+    "battery#bat1": {
+        "bat": "BAT1"
+    },
     "network": {
         "interface": "wlp3s0",
-        "format": "{essid} ({signalStrength}%) "
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname} ",
+        "format-disconnected": "Disconnected ⚠"
     },
     "pulseaudio": {
         "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
         "format-muted": "",
-        "format-icons": ["", ""]
-    },
-    "custom/spotify": {
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        }    },
+     "custom/spotify": {
         "format": " {}",
-        "exec": "$HOME/bin/mediaplayer.sh"
+        "max-length": 40,
+        "interval": 30, // Remove this if your script is endless and write in loop
+        "exec": "$HOME/bin/mediaplayer.sh", // Script in resources folder
+        "exec-if": "pgrep spotify"
     }
 }
