@@ -4,9 +4,9 @@
     "height": 20, // Waybar height
     // "width": 1366, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "custom/spotify"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "clock", "tray"],
+    "modules-left": ["sway/workspaces","sway/window" ],
+    //"modules-center": ["custom/spotify"],
+    "modules-right": ["custom/spotify","pulseaudio", "network", "cpu", "memory", "battery", "clock", "tray"],
     // Modules configuration
     "sway/workspaces": {
         "format-icons": {
