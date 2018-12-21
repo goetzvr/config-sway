@@ -4,11 +4,13 @@
     "height": 20, // Waybar height
     // "width": 1366, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces","sway/window" ],
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/window" ],
     //"modules-center": ["custom/spotify"],
-    "modules-right": ["custom/spotify","pulseaudio", "network", "cpu", "memory", "battery", "clock", "tray"],
+    "modules-right": ["custom/spotify","pulseaudio", "network", "cpu", "memory", "battery", "battery#bat2", "clock", "tray"],
     // Modules configuration
     "sway/workspaces": {
+//     "disable-scroll": true,
+//     "all-outputs": true,
         "format-icons": {
             "1": "",
             "3": "",
@@ -18,11 +20,8 @@
             "10": ""
         }
     },
-    "cpu": {
-        "format": "{}% "
-    },
-    "sway/window": {
-        "max-length": 60
+     "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
     },
     "tray": {
         // "icon-size": 21,
@@ -31,15 +30,22 @@
     "clock": { 
         "format-alt": "{:%Y-%m-%d}"
     },
+    "cpu": {
+        "format": "{usage}% "
+    },
     "memory": {
         "format": "{}% "
     },
-    "battery": {
+   "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
         "format": "{capacity}% {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat0": {
-        "bat": "BAT0"
     },
     "battery#bat1": {
         "bat": "BAT1"
@@ -47,10 +53,11 @@
     "network": {
         "interface": "wlp3s0",
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname} ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-disconnected": "Disconnected ⚠"
     },
     "pulseaudio": {
+        // "scroll-step": 1,
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon}",
         "format-muted": "",
@@ -62,12 +69,19 @@
             "portable": "",
             "car": "",
             "default": ["", ""]
-        }    },
+        },
+        "on-click": "pavucontrol"
+    },
+
      "custom/spotify": {
         "format": " {}",
         "max-length": 40,
         "interval": 30, // Remove this if your script is endless and write in loop
         "exec": "$HOME/bin/mediaplayer.sh", // Script in resources folder
         "exec-if": "pgrep spotify"
+    },
+    "sway/window": {
+        "max-length": 60
     }
+
 }
