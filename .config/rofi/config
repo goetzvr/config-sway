@@ -137,4 +137,4 @@ theme: Monokai.rasi;
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
-rofi.theme: /usr/share/rofi/themes/Monokai.rasi
+rofi.theme: /usr/share/rofi/themes/lb.rasi
