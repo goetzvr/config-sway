@@ -42,6 +42,9 @@ bindsym $mod+Shift+8 move container to workspace 8; workspace 8
 bindsym $mod+Shift+9 move container to workspace 9; workspace 9
 bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 
+bindsym $mod+Prior move workspace to output up
+bindsym $mod+Next move workspace to output down
+
 bindsym $mod+h splith
 bindsym $mod+v splitv
 
@@ -58,8 +61,6 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
     
-#bindsym $mod+x exec /usr/local/sbin/suspendlock.sh
-
 mode "resize" {
     bindsym Left resize shrink width 10 px or 10 ppt
     bindsym Down resize grow height 10 px or 10 ppt
