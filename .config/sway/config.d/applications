@@ -3,10 +3,11 @@ assign [class="Thunderbird"] workspace 9
 assign [class="keepassxc"] workspace 5
 assign [class="Code"] workspace 10
 
-exec --no-startup-id chromium
-exec --no-startup-id thunderbird
-exec --no-startup-id keepassxc
-exec --no-startup-id code
-exec --no-startup-id mako
-exec --no-startup-id redshift
-exec --no-startup-id xrdb ~/.Xresources
+exec chromium
+exec thunderbird
+exec keepassxc
+exec code
+exec mako
+exec redshift -m wayland
+exec xrdb ~/.Xresources
+exec waybar
