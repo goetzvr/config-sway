@@ -11,4 +11,4 @@ bindsym Insert exec $term -e python
 bindsym $mod+t exec $telegram
 bindsym $mod+x exec $firefox
 bindsym $mod+s exec slack
-bindsym $mod+l exec swaylock -c 000000
+bindsym $mod+l exec swaylock-blur
