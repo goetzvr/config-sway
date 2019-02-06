@@ -6,7 +6,8 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window" ],
     //"modules-center": ["custom/spotify"],
-    "modules-right": ["custom/spotify","pulseaudio", "network", "cpu", "memory", "battery", "battery#bat2", "clock", "tray"],
+    //"modules-right": ["custom/spotify","pulseaudio", "network", "cpu", "memory", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": ["custom/spotify","pulseaudio", "network", "cpu", "memory", "battery",  "clock", "tray"],
     // Modules configuration
     "sway/workspaces": {
 //     "disable-scroll": true,
