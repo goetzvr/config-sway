@@ -1,5 +1,0 @@
-# Status Bar:
-bar {
-#    status_command waybar > /home/gvr/.config/waybar/waybar.log 2>&1
-    swaybar_command waybar
-}
