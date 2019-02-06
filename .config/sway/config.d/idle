@@ -1,5 +1,5 @@
-exec swayidle \
-    timeout 300 'swaylock -c 000000' \
-    timeout 600 'swaymsg "output * dpms off"' \
+exec swayidle -w \
+    timeout 300 'swaylock-blur -f' \
+    timeout 600 'swaymsg "output * dpms off; systemctl suspend-then-hibernate"' \
        resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -c 000000'
+    before-sleep 'swaylock-blur -f'
