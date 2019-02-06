@@ -12,13 +12,14 @@ input "1739:0:Synaptics_TM3075-002" {
   events disabled
 }
 
+# definitions from login-shell
 # export XKB_DEFAULT_LAYOUT=us,de
 # export XKB_DEFAULT_VARIANT=,nodeadkeys
 # export XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle,caps:escape
 
-#input "1:1:AT_Translated_Set_2_keyboard" {
-  #xkb_layout en,us
-  #xkb_variant nodeadkeys
-  #xkb_options grp:alt_shift_toggle,caps:escape
-  #xkb_numlock disabled
-#}    
+input * {
+  xkb_numlock disabled
+  xkb_layout us,de
+  xkb_variant nodeadkeys
+  xkb_options grp:alt_shift_toggle,caps:escape
+}    
